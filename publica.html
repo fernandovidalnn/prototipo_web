@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>INICIO - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="#">INICIO</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        
+                        <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Menú</div>
+                            <a class="nav-link" href="inicio.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-house-user"></i></div>
+                                Inicio
+                            </a>
+                            
+                            
+                            <a class="nav-link" href="publica.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
+                                Publica tu idea
+                            </a>
+                            <a class="nav-link" href="conoce.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-magnifying-glass"></i></div>
+                                Conoce la de tus compañeros
+                            </a>
+                            <a class="nav-link" href="normas.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-exclamation"></i></div>
+                                Normas de la comunidad
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingreso de Información</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .info-box {
+            width: 500px; /* Aumenté el ancho de la caja principal */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .info-textarea {
+            width: 100%; /* Hice que la caja de texto ocupe el 100% del ancho de la caja principal */
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+            resize: none; /* Evita la redimensión manual */
+            overflow-y: hidden; /* Oculta la barra de desplazamiento vertical */
+        }
+
+        .info-input {
+            width: calc(100% - 18px); /* Aumenté el ancho y ajusté el espacio para el borde */
+            margin-bottom: 10px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .info-label {
+            text-align: left;
+            display: inline-block;
+            margin-bottom: 5px;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="info-box">
+        <h2>Ingrese la Información</h2>
+
+        <label for="informacion" class="info-label">Información:</label>
+        <textarea id="informacion" class="info-textarea" placeholder="Ingrese su información" oninput="autoResize()"></textarea>
+
+        <label for="nombre" class="info-label">Nombre:</label>
+        <input type="text" id="nombre" class="info-input" placeholder="Ingrese su nombre">
+
+        <label for="fecha" class="info-label">Fecha:</label>
+        <input type="text" id="fecha" class="info-input" placeholder="Ingrese la fecha" readonly>
+
+        <label for="carrera" class="info-label">Carrera:</label>
+        <select id="carrera" class="info-input">
+            <option value="">Seleccione una carrera</option>
+            <option value="Ing. en Informática">Ingeniería en Informática</option>
+            <option value="Analista Programador">Analista Programador</option>
+            <option value="Analista Programador Computacional">Analista Programador Computacional</option>
+            <option value="Administración de Empresas">Administración de Empresas</option>
+            <option value="Administración Hotelera">Administración Hotelera</option>
+            <option value="Administración de Redes y Telecomunicaciones">Administracion de Redes y Telecomunicaciones</option>
+            <option value="Animación Digital">Animación Digital</option>
+            <option value="Auditoría">Auditoría</option>
+            <option value="Comercio Exterior">Comercio Exterior</option>
+            <option value="Comunicación Audiovisual">Comunicación Audiovisual</option>
+            <option value="Contabilidad General Mención Legislación Tributaria">Contabilidad General Mención Legislación Tributaria</option>
+            <option value="Actuación">Actuación</option>
+            <option value="Contabilidad Tributaria">Contabilidad Tributaria</option>
+            <option value="Desarrollo de Aplicaciones">Desarrollo de Aplicaciones</option>
+            <option value="Desarrollo y Diseño Web">Desarrollo y Diseño Web</option>
+            <option value="Dibujo y Modelamiento Arquitectónico y Estructural">Dibujo y Modelamiento Arquitectónico y Estructural</option>
+            <option value="Diseño de Ambientes">Diseño de Ambientes</option>
+            <option value="Diseño de Vestuario">Diseño de Vestuario</option>
+            <option value="Diseño Gráfico">Diseño Gráfico</option>
+            <option value="Diseño Industrial">Diseño Industrial</option>
+            <option value="Ecoturismo">Ecoturismo</option>
+            <option value="Gastronomía">Gastronomía</option>
+            <option value="Gastronomía Internacional">Gastronomía Internacional</option>
+            <option value="Ilustración">Ilustración</option>
+            <option value="Informática Biomédica">Informática Biomédica</option>
+            <option value="Ingeniería en Administración Mención Finanzas">Ingeniería en Administración Mención Finanzas</option>
+            <option value="Ingeniería en Administración Mención Gestión de Personas">Ingeniería en Administración Mención Gestión de Personas</option>
+            <option value="Ingeniería en Administración Mención Innovación y Emprendimiento">Ingeniería en Administración Mención Innovación y Emprendimiento</option>
+            <option value="Ingeniería Agrícola">Ingeniería Agrícola</option>
+            <option value="Ingeniería en Comercio Exterior">Ingeniería en Comercio Exterior</option>
+            <option value="Ingeniería en Conectividad y Redes">Ingeniería en Conectividad y Redes</option>
+            <option value="Ingeniería en Construcción">Ingeniería en Construcción</option>
+            <option value="Ingeniería en Electricidad y Automatización Industrial">Ingeniería en Electricidad y Automatización Industrial</option>
+            <option value="Ingeniería en Desarrollo de Software">Ingeniería en Desarrollo de Software</option>
+            <option value="Ingeniería en Marketing Digital">Ingeniería en Marketing Digital</option>
+            <option value="Ingeniería en Gestión Logística">Ingeniería en Gestión Logística</option>
+            <option value="Ingeniería en Infraestructura Tecnológica">Ingeniería en Infraestructura Tecnológica</option>
+            <option value="Ingeniería en Maquinaria y Vehículos Pesados">Ingeniería en Maquinaria y Vehículos Pesados</option>
+            <option value="Ingeniería en Mecánica Automotriz y Autotrónica">Ingeniería en Mecánica Automotriz y Autotrónica</option>
+            <option value="Ingeniería en Medio Ambiente">Ingeniería en Medio Ambiente</option>
+            <option value="Ingeniería en Prevención de Riesgos">Ingeniería en Prevención de Riesgos</option>
+            <option value="Ingeniería en Sonido">Ingeniería en Sonido</option>
+            <option value="Preparador Físico">Preparador Físico</option>
+            <option value="Publicidad">Publicidad</option>
+            <option value="Relaciones Públicas Mención Marketing">Relaciones Públicas Mención Marketing</option>
+            <option value="Restauración de Bienes Patrimoniales">Restauración de Bienes Patrimoniales</option>
+            <option value="Técnico en Administración">Técnico en Administración</option>
+            <option value="Técnico Agrícola">Técnico Agrícola</option>
+            <option value="Técnico Audiovisual">Técnico Audiovisual</option>
+            <option value="Técnico en Calidad de Alimentos">Técnico en Calidad de Alimentos</option>
+            <option value="Técnico en Construcción">Técnico en Construcción</option>
+            <option value="Técnico en Electricidad y Automatización Industrial">Técnico en Electricidad y Automatización Industrial</option>
+            <option value="Técnico en Energías Renovables">Técnico en Energías Renovables</option>
+            <option value="Técnico en Enfermería">Técnico en Enfermería</option>
+            <option value="Técnico en Geología y Control de Sondaje">Técnico en Geología y Control de Sondaje</option>
+            <option value="Técnico en Gestión Logística">Técnico en Gestión Logística</option>
+            <option value="Técnico en Infraestructura Tecnológica">Técnico en Infraestructura Tecnológica</option>
+            <option value="Técnico en Instalaciones y Proyectos Eléctricos">Técnico en Instalaciones y Proyectos Eléctricos</option>
+            <option value="Técnico de Laboratorio Clínico y Banco de Sangre">Técnico de Laboratorio Clínico y Banco de Sangre</option>
+            <option value="Técnico en Mantenimiento Electromecánico">Técnico en Mantenimiento Electromecánico</option>
+            <option value="Técnico en Maquinaria y Vehículos Pesados">Técnico en Maquinaria y Vehículos Pesados</option>
+            <option value="Técnico en Mecánica Automotriz y Autotrónica">Técnico en Mecánica Automotriz y Autotrónica</option>
+            <option value="Técnico en Odontología">Técnico en Odontología</option>
+            <option value="Técnico en Prevención de Riesgos">Técnico en Prevención de Riesgos</option>
+            <option value="Técnico en Química y Farmacia">Técnico en Química y Farmacia</option>
+            <option value="Técnico de Radiodiagnóstico y Radioterapia">Técnico de Radiodiagnóstico y Radioterapia</option>
+            <option value="Tecnología en Sonido">Tecnología en Sonido</option>
+            <option value="Técnico Topógrafo">Técnico Topógrafo</option>
+            <option value="Técnico Veterinario y Pecuario">Técnico Veterinario y Pecuario</option>
+            <option value="Tourism & Hospitality">Tourism & Hospitality</option>
+            <option value="Turismo de Aventura">Turismo de Aventura</option>
+            <option value="Turismo y Hotelería">Turismo y Hotelería</option>
+            <option value="Turismo Técnico Mención en Empresas Turísticas">Turismo Técnico Mención en Empresas Turísticas</option>
+        </select>
+
+        <label for="sede" class="info-label">Sede:</label>
+        <select id="sede" class="info-input">
+            <option value="">Seleccione una sede</option>
+            <option value="Padre Alonso de Ovalle">Padre Alonso de Ovalle</option>
+            <option value="Plaza Oeste">Plaza Oeste</option>
+            <option value="Alameda">Alameda</option>
+            <option value="Antonio Varas">Antonio Varas</option>
+            <option value="Educación Continua">Educación Continua</option>
+            <option value="Maipú">Maipú</option>
+            <option value="Melipilla">Melipilla</option>
+            <option value="Plaza Norte">Plaza Norte</option>
+            <option value="Plaza Vespucio">Plaza Vespucio</option>
+            <option value="Puente Alto">Puente Alto</option>
+            <option value="San Bernardo">San Bernardo</option>
+            <option value="San Carlos de Apoquindo">San Carlos de Apoquindo</option>
+            <option value="San Joaquín">San Joaquín</option>
+            <option value="Valparaíso">Valparaíso</option>
+            <option value="Viña del Mar">Viña del Mar</option>
+            <option value="Campus Arauco">Campus Arauco</option>
+            <option value="Campus Nacimiento">Campus Nacimiento</option>
+            <option value="San Andrés de Concepción">San Andrés de Concepción</option>
+            <option value="Campus Villarrica">Campus Villarrica</option>
+            <option value="Puerto Montt">Puerto Montt</option>
+        </select>
+
+        <button class="submit-btn" onclick="guardarInformacion()">Guardar</button>
+    </div>
+
+    <script>
+        function autoResize() {
+            var textarea = document.getElementById('informacion');
+            textarea.style.height = 'auto';
+            textarea.style.height = (textarea.scrollHeight) + 'px';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Obtener la fecha actual
+            var fechaActual = new Date().toLocaleDateString();
+            
+            // Establecer la fecha actual en el campo de fecha
+            document.getElementById('fecha').value = fechaActual;
+
+            // Establecer los campos de carrera y sede en blanco al cargar la página
+            document.getElementById('carrera').value = '';
+            document.getElementById('sede').value = '';
+        });
+
+        function guardarInformacion() {
+            var informacion = document.getElementById('informacion').value;
+            var nombre = document.getElementById('nombre').value;
+            var fecha = document.getElementById('fecha').value;
+            var carrera = document.getElementById('carrera').value;
+            var sede = document.getElementById('sede').value;
+
+            // Puedes realizar alguna acción con la información ingresada aquí, como enviarla a un servidor o mostrarla en la consola.
+            console.log('Información: ' + informacion);
+            console.log('Nombre: ' + nombre);
+            console.log('Fecha: ' + fecha);
+            console.log('Carrera: ' + carrera);
+            console.log('Sede: ' + sede);
+
+            // Limpiar los campos después de guardar
+            document.getElementById('informacion').value = '';
+            document.getElementById('nombre').value = '';
+            // Mantener la fecha actual
+            document.getElementById('carrera').value = '';
+            document.getElementById('sede').value = '';
+        }
+    </script>
+
+</body>
+</html>
+
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Yoteescucho Website 2023</div>
+                            <div>
+                                <a href="#">Politicas de privacidad</a>
+                                &middot;
+                                <a href="#">Terminos &amp; condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

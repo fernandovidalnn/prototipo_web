@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>INICIO - SB Admin</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    </head>
+    <body class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="#">INICIO</a>
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Buscar..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        
+                        <li><a class="dropdown-item" href="login.html">Salir</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <div class="sb-sidenav-menu-heading">Menú</div>
+                            <a class="nav-link" href="inicio.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-house-user"></i></div>
+                                Inicio
+                            </a>
+                            
+                            
+                            <a class="nav-link" href="publica.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
+                                Publica tu idea
+                            </a>
+                            <a class="nav-link" href="conoce.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-magnifying-glass"></i></div>
+                                Conoce la de tus compañeros
+                            </a>
+                            <a class="nav-link" href="normas.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-exclamation"></i></div>
+                                Normas de la comunidad
+                            </a>
+                        </div>
+                    </div>
+                    
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Conoce la de tus compañeros</h1>
+                        
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                Ranking propuestas
+                            </div>
+                        </div>
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Tabla de datos
+                            </div>
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>asunto/motivo</th>
+                                            <th>Carrera</th>
+                                            <th>Me gusta</th>
+                                            <th>Fecha</th>
+                                            <th>Sede</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Nombre</th>
+                                            <th>asunto/motivo</th>
+                                            <th>Carrera</th>
+                                            <th>Me gusta</th>
+                                            <th>Fecha</th>
+                                            <th>Sede</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td>Fernando Vidal</td>
+                                            <td>Infraestructura</td>
+                                            <td>Ing. en Informática</td>
+                                            <td>10</td>
+                                            <td>2023/11/14</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pablo Escobar</td>
+                                            <td>Proceso de admisión</td>
+                                            <td>Analista programador computacional</td>
+                                            <td>63</td>
+                                            <td>2023/11/10</td>
+                                            <td>Plaza Norte</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sofía Rodríguez</td>
+                                            <td>Programas académicos</td>
+                                            <td>Desarrollo de aplicaciones</td>
+                                            <td>66</td>
+                                            <td>2023/10/30</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mateo Martínez</td>
+                                            <td>Recursos tecnológicos en el aula</td>
+                                            <td>Adm. de redes y telecomunicaciones</td>
+                                            <td>22</td>
+                                            <td>2023/10/25</td>
+                                            <td>Plaza Vespucio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valentina González</td>
+                                            <td>Acceso a bibliotecas y recursos de investigación</td>
+                                            <td>Ing. en conectividad y redes</td>
+                                            <td>33</td>
+                                            <td>2023/10/20</td>
+                                            <td>San Bernardo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sebastián López</td>
+                                            <td>Apoyo a estudiantes internacionales</td>
+                                            <td>Ing. en Informática</td>
+                                            <td>61</td>
+                                            <td>2023/10/06</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Isabella Pérez</td>
+                                            <td>Evaluación y retroalimentación de profesores</td>
+                                            <td>Gastronomía internacional</td>
+                                            <td>59</td>
+                                            <td>2023/09/29</td>
+                                            <td>Antonio Varas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alejandro Sánchez</td>
+                                            <td>Tutorías académicas</td>
+                                            <td>Adm. de empresas</td>
+                                            <td>55</td>
+                                            <td>2023/09/25</td>
+                                            <td>Campus Virtual</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camila Ramírez</td>
+                                            <td>Apoyo financiero para estudiantes</td>
+                                            <td>Contabilidad tributaria</td>
+                                            <td>39</td>
+                                            <td>2023/09/15</td>
+                                            <td>Campus Virtual</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Daniel Torres</td>
+                                            <td>Desarrollo profesional y orientación laboral</td>
+                                            <td>Tecnico en gestión logistica</td>
+                                            <td>23</td>
+                                            <td>2023/09/11</td>
+                                            <td>Plaza Oeste</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Lucía Flores</td>
+                                            <td>Infraestructura y mantenimiento</td>
+                                            <td>Auditoría</td>
+                                            <td>30</td>
+                                            <td>2023/09/03</td>
+                                            <td>Viña Del Mar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nicolás Castro</td>
+                                            <td>Participación estudiantil</td>
+                                            <td>Tecnico en administración</td>
+                                            <td>22</td>
+                                            <td>2023/08/31</td>
+                                            <td>Melipilla</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Emma Díaz</td>
+                                            <td>Accesibilidad para personas con discapacidades</td>
+                                            <td>Comercio exterior</td>
+                                            <td>36</td>
+                                            <td>2023/08/24</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Juan Herrera</td>
+                                            <td>Actividades extracurriculares</td>
+                                            <td>Ilustracion</td>
+                                            <td>43</td>
+                                            <td>2023/08/18</td>
+                                            <td>San Carlos De Apoquindo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Victoria Vargas</td>
+                                            <td>Apoyo a la salud mental y bienestar estudiantil</td>
+                                            <td>Diseño grafico</td>
+                                            <td>19</td>
+                                            <td>2023/08/10</td>
+                                            <td>Plaza Vespucio</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Michael Silva</td>
+                                            <td>Relaciones con la industria y oportunidades de empleo</td>
+                                            <td>Diseño de vestuario</td>
+                                            <td>66</td>
+                                            <td>2023/07/27</td>
+                                            <td>San Carlos De Apoquindo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gabriel Jiménez</td>
+                                            <td>Flexibilidad en los horarios de clases</td>
+                                            <td>Diseño de ambientes</td>
+                                            <td>64</td>
+                                            <td>2023/07/17</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>María Ruiz</td>
+                                            <td>Ambiente de aprendizaje inclusivo</td>
+                                            <td>Tecnico agrícola</td>
+                                            <td>59</td>
+                                            <td>2023/07/11</td>
+                                            <td>Puente Alto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Andrés Gómez</td>
+                                            <td>Transparencia en la información académica</td>
+                                            <td>Ing. en medio ambiente</td>
+                                            <td>41</td>
+                                            <td>2023/07/05</td>
+                                            <td>Maipú</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Amelia Castro</td>
+                                            <td>Investigación y oportunidades de participación estudiantil</td>
+                                            <td>Tecnico en mecanica automotriz y autotrónica</td>
+                                            <td>35</td>
+                                            <td>2023/06/28</td>
+                                            <td>San Joaquín</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Leonardo Rivera</td>
+                                            <td>Programas de intercambio estudiantil</td>
+                                            <td>Tecnico topógrafo</td>
+                                            <td>30</td>
+                                            <td>2023/06/22</td>
+                                            <td>Alameda</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carlos González</td>
+                                            <td>Mejora de las instalaciones deportivas</td>
+                                            <td>Tecnico en construcción</td>
+                                            <td>40</td>
+                                            <td>2023/06/14</td>
+                                            <td>Puerto Montt</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Olivia Martínez</td>
+                                            <td>Sostenibilidad y prácticas ecológicas</td>
+                                            <td>Turismo de aventura</td>
+                                            <td>21</td>
+                                            <td>2023/06/06</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Samuel Rodríguez</td>
+                                            <td>Apoyo a la diversidad y la inclusión</td>
+                                            <td>Turismo y hotelería</td>
+                                            <td>23</td>
+                                            <td>2023/05/29</td>
+                                            <td>Villarrica</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Angelica Ramos</td>
+                                            <td>Programas de mentoría estudiantil</td>
+                                            <td>Ecoturismo</td>
+                                            <td>47</td>
+                                            <td>2023/05/23</td>
+                                            <td>San Bernardo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ana Soto</td>
+                                            <td>Evaluación del rendimiento institucional</td>
+                                            <td>Administración hotelera</td>
+                                            <td>42</td>
+                                            <td>2023/05/21</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rafael Mendoza</td>
+                                            <td>Innovación en la enseñanza</td>
+                                            <td>Informática biomédica</td>
+                                            <td>28</td>
+                                            <td>2023/05/19</td>
+                                            <td>Maipú</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Isabela Ramírez</td>
+                                            <td>Incentivos para la investigación de profesores</td>
+                                            <td>Preparador físico</td>
+                                            <td>28</td>
+                                            <td>2023/05/17</td>
+                                            <td>Viña Del Mar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Esteban Pérez</td>
+                                            <td>Alianzas con la comunidad local</td>
+                                            <td>Técnico en odontología</td>
+                                            <td>48</td>
+                                            <td>2023/04/20</td>
+                                            <td>San Joaquín</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Martina Torres</td>
+                                            <td>Programas de voluntariado estudiantil</td>
+                                            <td>Técnico en enfermería</td>
+                                            <td>20</td>
+                                            <td>2023/04/12</td>
+                                            <td>Nacimiento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>David López</td>
+                                            <td>Evaluación y actualización de los planes de estudio</td>
+                                            <td>Publicidad</td>
+                                            <td>37</td>
+                                            <td>2023/04/10</td>
+                                            <td>Maipú</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Renata Herrera</td>
+                                            <td>Servicios de asesoramiento académico</td>
+                                            <td>Ing. en sonido</td>
+                                            <td>53</td>
+                                            <td>2023/03/30</td>
+                                            <td>San Carlos De Apoquindo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Diego Gutiérrez</td>
+                                            <td>Tecnología de aprendizaje a distancia</td>
+                                            <td>Técnico audiovisual</td>
+                                            <td>27</td>
+                                            <td>2023/03/22</td>
+                                            <td>San Carlos De Apoquindo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Marta Vargas</td>
+                                            <td>Apoyo a proyectos estudiantiles y emprendimiento</td>
+                                            <td>Actuación</td>
+                                            <td>22</td>
+                                            <td>2023/03/15</td>
+                                            <td>Viña Del Mar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tomás Flores</td>
+                                            <td>Mejora de la seguridad en el campus</td>
+                                            <td>Animación digital</td>
+                                            <td>46</td>
+                                            <td>2023/03/14</td>
+                                            <td>San Carlos De Apoquindo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Aitana Sánchez</td>
+                                            <td>Programas de intercambio cultural</td>
+                                            <td>Comunicación audiovisual</td>
+                                            <td>47</td>
+                                            <td>2023/03/11</td>
+                                            <td>San Carlos De Apoquindo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Miguel Castro</td>
+                                            <td>Plataformas de aprendizaje en línea</td>
+                                            <td>Ing. en Informática</td>
+                                            <td>51</td>
+                                            <td>2023/03/10</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Laura Díaz</td>
+                                            <td>Desarrollo de habilidades blandas</td>
+                                            <td>Ing. en construcción</td>
+                                            <td>41</td>
+                                            <td>2023/03/08</td>
+                                            <td>Alameda</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Matías Jiménez</td>
+                                            <td>Integración de nuevas tecnologías educativas</td>
+                                            <td>Ing. en prevención de riesgos</td>
+                                            <td>62</td>
+                                            <td>2023/03/07</td>
+                                            <td>San Andrés De Concepción</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Julia Herrera</td>
+                                            <td>Colaboración entre facultades y departamentos</td>
+                                            <td>Técnico en administración</td>
+                                            <td>37</td>
+                                            <td>2023/03/05</td>
+                                            <td>Melipilla</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nicolás Vargas</td>
+                                            <td>Evaluación del clima institucional</td>
+                                            <td>Ing. en gestión logística</td>
+                                            <td>65</td>
+                                            <td>2023/03/03</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Daniela Ramírez</td>
+                                            <td>Evaluación de la satisfacción estudiantil</td>
+                                            <td>Ing. en conectividad y redes</td>
+                                            <td>64</td>
+                                            <td>2023/03/02</td>
+                                            <td>Antonio Varas</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Camila Morales</td>
+                                            <td>Programas de becas y ayudas económicas</td>
+                                            <td>Desarrollo de aplicaciones</td>
+                                            <td>38</td>
+                                            <td>2023/02/28</td>
+                                            <td>Campus Virtual</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ángel Soto</td>
+                                            <td>Servicios de salud en el campus</td>
+                                            <td>Analista programador computacional</td>
+                                            <td>37</td>
+                                            <td>2023/02/26</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valentina Gutiérrez</td>
+                                            <td>Acceso a tecnología y software especializado</td>
+                                            <td>Administración hotelera</td>
+                                            <td>61</td>
+                                            <td>2023/02/25</td>
+                                            <td>Valparaíso</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alejandro Pérez</td>
+                                            <td>Desarrollo de habilidades de investigación</td>
+                                            <td>Turismo y hotelería</td>
+                                            <td>47</td>
+                                            <td>2023/02/24</td>
+                                            <td>San Bernardo</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Carolina Ruiz</td>
+                                            <td>Programas de aprendizaje servicio</td>
+                                            <td>Gastronomía</td>
+                                            <td>64</td>
+                                            <td>2023/02/22</td>
+                                            <td>Valparaíso</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Adrián Torres</td>
+                                            <td>Evaluación y mejora continua de los cursos</td>
+                                            <td>Gastronomía internacional</td>
+                                            <td>63</td>
+                                            <td>2023/02/20</td>
+                                            <td>Valparaíso</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sofía Rodríguez</td>
+                                            <td>Acceso a laboratorios y recursos especializados</td>
+                                            <td>Diseño industrial</td>
+                                            <td>56</td>
+                                            <td>2023/02/18</td>
+                                            <td>Plaza Oeste</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Francisco Martínez</td>
+                                            <td>Comunicación efectiva entre la administración y los estudiantes</td>
+                                            <td>Diseño de ambientes</td>
+                                            <td>43</td>
+                                            <td>2023/02/16</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Clara González</td>
+                                            <td>Apoyo a la innovación y emprendimiento estudiantil</td>
+                                            <td>Desarrollo y diseño web</td>
+                                            <td>46</td>
+                                            <td>2023/02/14</td>
+                                            <td>Campus Virtual</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Emilio López</td>
+                                            <td>Mejora de la calidad del transporte en el campus</td>
+                                            <td>Preparador físico</td>
+                                            <td>47</td>
+                                            <td>2023/02/13</td>
+                                            <td>Maipú</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gabriela Pérez</td>
+                                            <td>Programas de estudio en el extranjero</td>
+                                            <td>Ing. en Informática</td>
+                                            <td>21</td>
+                                            <td>2023/02/12</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Samuel Flores</td>
+                                            <td>Uso eficiente de la tecnología en la administración</td>
+                                            <td>Téc. en infraestructura tecnológica</td>
+                                            <td>30</td>
+                                            <td>2023/02/10</td>
+                                            <td>Viña Del Mar</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valeria Sánchez</td>
+                                            <td>Transparencia en los procesos administrativos</td>
+                                            <td>Analista programador computacional</td>
+                                            <td>51</td>
+                                            <td>2023/02/07</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Javier Jiménez</td>
+                                            <td>Programas de ayuda para la transición a la vida universitaria</td>
+                                            <td>Desarrollo de aplicaciones</td>
+                                            <td>29</td>
+                                            <td>2023/02/04</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Felipe Jara</td>
+                                            <td>Apoyo a estudiantes con responsabilidades familiares</td>
+                                            <td>Ing. en Informática</td>
+                                            <td>69</td>
+                                            <td>2023/02/01</td>
+                                            <td>Padre Alonso Ovalle</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid px-4">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Yoteescucho Website 2023</div>
+                            <div>
+                                <a href="#">Politicas de privacidad</a>
+                                &middot;
+                                <a href="#">Terminos &amp; condiciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
